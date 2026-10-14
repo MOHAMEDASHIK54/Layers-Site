@@ -1,342 +1,517 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lawyer's Site</title>
-     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Lawyer & Co. | Premier Legal Counsel & Defense</title>
+    <meta name="description" content="Lawyer & Co. provides elite legal services across Corporate, Banking, Environment, Real Estate, and Civil Litigation matters worldwide.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <style>
+        :root {
+            --font-serif: 'Cinzel', serif;
+            --font-sans: 'Poppins', sans-serif;
+        }
+        body {
+            font-family: var(--font-sans);
+            overflow-x: hidden;
+            background-color: #0b0c10;
+            color: #e2e8f0;
+        }
+        .font-cinzel {
+            font-family: var(--font-serif);
+        }
+        .hero-bg {
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0.70) 50%, rgba(0, 0, 0, 0.45) 100%), url('./images/law-4.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .glass-card {
+            background: rgba(20, 20, 25, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+    </style>
 </head>
-<body>
-    <nav>
-        <div class="bg-black flex justify-end">
-<a href="#">
-    <img  src="/images/twiter.jpg" alt="" class="w-7 h-7 m-1">
-</a>
-<a href="#">
-    <img class="w-7 h-7 m-1" src="/images/facebook.jpg" alt="">
-</a>
-<a href="#">
-    <img class="w-7 h-7 m-1" src="/images/x.jpg" alt="">
-</a>
-<a href="#">
-    <img class="w-7 h-7 m-1" src="./images/google.jpg" alt="">
-</a>
-        </div>
-        <div>
-        <div class="flex">
-            <img class="h-15 w-30 -translate-x-5" src="/images/lawyerlogo-removebg-preview.png" alt="">
-<h3 class="-translate-x-12 font-['Arial'] text-3xl translate-y-2 font-semibold">LAWYER<span class="text-red-400">&</span>CO</h3>
-        </div>
-        <div class="flex justify-end -translate-y-12 -translate-x-2 ">
-            <img class="h-7 w-8" src="./images/phone.jpg" alt="">
-            Free Consultation: +1 334-445-5777
-        </div>
-        </div>
-        <div class="flex items-center">
-        <div class="flex justify-center gap-2 flex-1">
-            <a class="font-['Times_New_Roman'] text-2xl px-4 py-2 rounded-lg
-       transition-all duration-300
-       hover:bg-red-600 hover:text-white
-       hover:scale-110" href="#">Home</a>
-       <a class="font-['Times_New_Roman'] text-2xl px-4 py-2 rounded-lg
-       transition-all duration-300
-       hover:bg-red-600 hover:text-white
-       hover:scale-110" href="#">About</a>
-       <a class="font-['Times_New_Roman'] text-2xl px-4 py-2 rounded-lg
-       transition-all duration-300
-       hover:bg-red-600 hover:text-white
-       hover:scale-110" href="#">Locations</a>
-       <a class="font-['Times_New_Roman'] text-2xl px-4 py-2 rounded-lg
-       transition-all duration-300
-       hover:bg-red-600 hover:text-white
-       hover:scale-110" href="#">News</a>
-       <a class="font-['Times_New_Roman'] text-2xl px-4 py-2 rounded-lg
-       transition-all duration-300
-       hover:bg-red-600 hover:text-white
-       hover:scale-110" href="#">Pages</a>
-       <a class="font-['Times_New_Roman'] text-2xl px-4 py-2 rounded-lg
-       transition-all duration-300
-       hover:bg-red-600 hover:text-white
-       hover:scale-110" href="#">Careers</a>
-       </div>
-       <div class="mr-20">
-        <img class="h-15 w-20 font-['Times_New_Roman'] text-2xl px-4 py-2 rounded-lg
-       transition-all duration-300
-       hover:bg-red-600 hover:text-white
-       hover:scale-110" src="/images/searchlogo-removebg-preview.png" alt="">
-       </div>
+<body class="selection:bg-red-800 selection:text-white">
+
+    <!-- Top Utility Bar -->
+    <header class="w-full bg-black/90 border-b border-white/10 sticky top-0 z-50 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between py-2 text-xs text-gray-400 border-b border-white/5">
+                <div class="flex items-center space-x-4">
+                    <span class="flex items-center gap-1.5 text-gray-300">
+                        <img src="./images/phone.jpg" alt="Phone" class="w-4 h-4 rounded-full object-cover inline" loading="lazy">
+                        <span class="font-medium text-amber-200/90">Free Consultation:</span>
+                        <a href="tel:+13344455777" class="hover:text-white transition">+1 334-445-5777</a>
+                    </span>
+                    <span class="hidden sm:inline text-gray-600">|</span>
+                    <span class="hidden sm:inline text-gray-400">Mon - Fri: 8:00 AM - 7:00 PM EST</span>
+                </div>
+                <!-- Social Links -->
+                <div class="flex items-center space-x-2">
+                    <a href="#" aria-label="Twitter" class="p-1 rounded-full hover:opacity-80 transition hover:scale-110">
+                        <img src="./images/twiter.jpg" alt="Twitter" class="w-5 h-5 rounded-full object-cover">
+                    </a>
+                    <a href="#" aria-label="Facebook" class="p-1 rounded-full hover:opacity-80 transition hover:scale-110">
+                        <img src="./images/facebook.jpg" alt="Facebook" class="w-5 h-5 rounded-full object-cover">
+                    </a>
+                    <a href="#" aria-label="X" class="p-1 rounded-full hover:opacity-80 transition hover:scale-110">
+                        <img src="./images/x.jpg" alt="X" class="w-5 h-5 rounded-full object-cover">
+                    </a>
+                    <a href="#" aria-label="Google" class="p-1 rounded-full hover:opacity-80 transition hover:scale-110">
+                        <img src="./images/google.jpg" alt="Google" class="w-5 h-5 rounded-full object-cover">
+                    </a>
+                </div>
             </div>
-    </nav>
-    <section class="relative w-screen h-screen overflow-hidden">
-    <div class="w-full h-full
-            bg-[url('/images/law-4.jpg')]
-            bg-cover bg-center
-            transition duration-700
-            hover:scale-110">
-    </div>
-     <div class="absolute left-0 top-1/2
-                    -translate-y-1/2
-                    bg-black/70
-                    px-12 py-10
-                    text-white
-                    transition-all duration-1000
-                    hover:translate-x-10">
 
-            <h1 class="text-5xl font-bold mb-4">
-                Practice Area Pages
-            </h1>
+            <!-- Main Navigation -->
+            <div class="flex items-center justify-between py-3">
+                <!-- Brand / Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <img class="h-12 w-auto object-contain transition-transform group-hover:scale-105" src="./images/lawyerlogo-removebg-preview.png" alt="Lawyer & Co Logo">
+                    <div>
+                        <h2 class="font-cinzel text-2xl font-bold tracking-wider text-white">
+                            LAWYER<span class="text-red-600">&</span>CO
+                        </h2>
+                        <p class="text-[10px] tracking-[0.2em] text-gray-400 uppercase -mt-1">Attorneys At Law</p>
+                    </div>
+                </a>
 
-            <p class="text-xl max-w-xl">
-                Explains specific legal services, types of matters handled,
-                and representative case results in simple terms.
-            </p>
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex items-center space-x-1 lg:space-x-2">
+                    <a href="#" class="font-cinzel text-sm uppercase px-3 py-2 rounded-md font-medium text-white hover:text-red-500 transition-colors">Home</a>
+                    <a href="#about" class="font-cinzel text-sm uppercase px-3 py-2 rounded-md font-medium text-gray-300 hover:text-red-500 transition-colors">About</a>
+                    <a href="#practices" class="font-cinzel text-sm uppercase px-3 py-2 rounded-md font-medium text-gray-300 hover:text-red-500 transition-colors">Practices</a>
+                    <a href="#locations" class="font-cinzel text-sm uppercase px-3 py-2 rounded-md font-medium text-gray-300 hover:text-red-500 transition-colors">Locations</a>
+                    <a href="#news" class="font-cinzel text-sm uppercase px-3 py-2 rounded-md font-medium text-gray-300 hover:text-red-500 transition-colors">News</a>
+                    <a href="#careers" class="font-cinzel text-sm uppercase px-3 py-2 rounded-md font-medium text-gray-300 hover:text-red-500 transition-colors">Careers</a>
+                </nav>
 
+                <!-- Actions: Search & CTA -->
+                <div class="flex items-center gap-3">
+                    <button type="button" aria-label="Search" class="p-2 text-gray-400 hover:text-white transition">
+                        <img class="h-6 w-6 object-contain opacity-80 hover:opacity-100" src="./images/searchlogo-removebg-preview.png" alt="Search">
+                    </button>
+                    <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-red-700 hover:bg-red-800 rounded transition-all duration-300 shadow-lg shadow-red-900/40 hover:shadow-red-700/60">
+                        Consult Now
+                    </a>
+                    <!-- Mobile Hamburger -->
+                    <button id="mobile-menu-btn" type="button" aria-label="Open Menu" class="md:hidden p-2 text-gray-300 hover:text-white focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu Dropdown -->
+            <div id="mobile-menu" class="hidden md:hidden py-4 border-t border-white/10 flex flex-col space-y-2">
+                <a href="#" class="font-cinzel text-sm uppercase px-3 py-2 rounded text-white hover:bg-red-900/40">Home</a>
+                <a href="#about" class="font-cinzel text-sm uppercase px-3 py-2 rounded text-gray-300 hover:bg-red-900/40">About</a>
+                <a href="#practices" class="font-cinzel text-sm uppercase px-3 py-2 rounded text-gray-300 hover:bg-red-900/40">Practices</a>
+                <a href="#locations" class="font-cinzel text-sm uppercase px-3 py-2 rounded text-gray-300 hover:bg-red-900/40">Locations</a>
+                <a href="#news" class="font-cinzel text-sm uppercase px-3 py-2 rounded text-gray-300 hover:bg-red-900/40">News</a>
+                <a href="#careers" class="font-cinzel text-sm uppercase px-3 py-2 rounded text-gray-300 hover:bg-red-900/40">Careers</a>
+            </div>
         </div>
-       
-    </section>
-    <section class=" w-full ">
-     <div class="flex justify-between ">
-        <div class="w-[360px] p-6
-            border-2 border-red-600 bg-black
-            text-center rounded-full
-            transition-all duration-300
-            hover:bg-red-600
-            hover:scale-110 mt-18">
+    </header>
 
-    <h2 class="text-red-800 font-bold text-3xl
-               transition-colors duration-300
-               hover:text-white">
-        Global Coverage
-    </h2>
-
-    <p class="text-white mt-3">
-        Features clear messaging above the fold
-    </p>
-
-</div>
-         <div class="w-[360px] p-6
-            border-2 border-red-600 bg-black
-            text-center rounded-full
-            transition-all duration-300
-            hover:bg-red-600
-            hover:scale-110 mt-18">
-
-    <h2 class="text-red-800 font-bold text-3xl
-               transition-colors duration-300
-               hover:text-white">
-        Press release
-    </h2>
-
-    <p class="text-white mt-3">
-        Features clear messaging above the fold
-    </p>
-
-</div>
-        <div class="w-[360px] p-6
-            border-2 border-red-600 bg-black
-            text-center rounded-full
-            transition-all duration-300
-            hover:bg-red-600
-            hover:scale-110 mt-18">
-
-    <h2 class="text-red-800 font-bold text-3xl
-               transition-colors duration-300
-               hover:text-white">
-        Join our Team
-    </h2>
-
-    <p class="text-white mt-3">
-        Features clear messaging above the fold
-    </p>
-
-</div>
-</div>
-        <div class="pt-10 text-red-800 m-15 text-3xl font-bold font-['Times_New_Roman'] flex items-center justify-center">
-            <div>
-            <h3  >Law is nothing other than a certain ordinance of reason for the common good,</h3>
-                 <h3 class="pl-17">promulgated by the person who has the care of the community.</h3>
-        </div>
+    <!-- Hero Section -->
+    <section class="relative min-h-[85vh] lg:min-h-[90vh] flex items-center hero-bg bg-fixed">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full relative z-10">
+            <div class="max-w-2xl bg-black/80 backdrop-blur-md p-8 md:p-12 rounded-xl border-l-4 border-red-600 shadow-2xl transition-transform duration-500 hover:translate-x-2">
+                <span class="inline-block px-3 py-1 bg-red-950/80 text-red-400 border border-red-800/60 rounded-full text-xs font-semibold tracking-widest uppercase mb-4">
+                    Trusted Legal Defense
+                </span>
+                <h1 class="font-cinzel text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                    Practice Area <span class="text-red-500">Pages</span>
+                </h1>
+                <p class="text-gray-300 text-base sm:text-lg leading-relaxed mb-8">
+                    Explains specific legal services, types of matters handled, and representative case results in simple terms. Dedicated to protecting your rights and achieving decisive legal outcomes.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#practices" class="px-6 py-3 bg-red-700 hover:bg-red-800 text-white font-cinzel font-semibold text-sm uppercase tracking-wider rounded transition-all duration-300 shadow-lg shadow-red-900/50 hover:scale-105">
+                        Our Practices
+                    </a>
+                    <a href="#quote" class="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-cinzel font-semibold text-sm uppercase tracking-wider rounded border border-white/20 transition-all duration-300">
+                        Learn More
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
-    <section class="flex justify-evenly text-center py-10">
-      <div class="w-[400px] overflow-hidden rounded-lg">
-        <img class="w-100 h-60 w-full h-60 object-cover rounded-lg
-         transition-all duration-500
-         hover:rotate-2 hover:scale-105" src="/images/df5.jpg" alt="">
-        <h3 class="m-3 font-['Times_New_Roman'] font-bold text-2xl text-red-800">Our Expertise</h3>
-<p class="font-['Times_New_Roman']">Quisque consectetur lacinia felis, posumassa fermentum <br> metus nibh, tincidunt luctus hendrerit, <br> iaculis suspendisse potent</p>
-      </div>
-        <div class="w-[400px] overflow-hidden rounded-lg">
-        <img class="w-100 h-60 object-cover rounded-lg
-         transition-all duration-500
-         hover:rotate-2 hover:scale-105" src="/images/law-2.jpg" alt="">
-        <h3 class="m-3 font-['Times_New_Roman'] font-bold text-2xl text-red-800">Around the world</h3>
-<p class="font-['Times_New_Roman']">Quisque consectetur lacinia felis, posumassa fermentum <br> metus nibh, tincidunt luctus hendrerit, <br> iaculis suspendisse potent</p>
-      </div>
-        <div class="w-[400px] overflow-hidden rounded-lg">
-        <img class="w-100 h-60 object-cover rounded-lg
-         transition-all duration-500
-         hover:rotate-2 hover:scale-105" src="/images/law-3.jpg" alt="">
-        <h3 class="m-3 font-['Times_New_Roman'] font-bold text-2xl text-red-800">Principles & Values</h3>
-<p class="font-['Times_New_Roman']">Quisque consectetur lacinia felis, posumassa fermentum <br> metus nibh, tincidunt luctus hendrerit, <br> iaculis suspendisse potent</p>
-      </div>
-    </section>
-    <section class="">
-        <div class="flex justify-center text-center pt-11">
-            <h3 class="font-['Times_New_Roman'] text-3xl">EXPERIENCE & PRACTICES</h3>
-        </div>
-  <div class="flex justify-evenly gap-6 mt-10 m-3">
 
-        <div class="border rounded-lg w-75 h-65 bg-red-900
-                    text-center flex flex-col items-center transition-transform duration-500
-            hover:scale-110">
-            <img
-                class="w-10 h-10 mt-6"
-                src="/images/environment.jpg"
-                alt="">
-            <h3 class="mt-10 text-black font-bold text-2xl font-['Times_New_Roman']">
-                ENVIRONMENT
-            </h3>
-            <p class="text-white text-sm px-5 mt-3">
-                Posumassa fermentum metus tincidunt luctus hendrerit,
-                iaculis suspendisse esent sit amet rhoncus nisi.
-            </p>
-        </div>
-         <div class="border rounded-lg w-75 h-65 bg-red-900
-                    text-center flex flex-col items-center transition-transform duration-500
-            hover:scale-110">
-            <img
-                class="w-10 h-10 mt-6"
-                src="/images/corparate.jpg"
-                alt="">
-            <h3 class="mt-10 text-black font-bold text-2xl font-['Times_New_Roman']">
-                CORPORATE
-            </h3>
-            <p class="text-white text-sm px-5 mt-3">
-                Posumassa fermentum metus tincidunt luctus hendrerit,
-                iaculis suspendisse esent sit amet rhoncus nisi.
-            </p>
-        </div>
-         <div class="border rounded-lg w-75 h-65 bg-red-900
-                    text-center flex flex-col items-center transition-transform duration-500
-            hover:scale-110">
-            <img
-                class="w-10 h-10 mt-6"
-                src="/images/bank.jpg"
-                alt="">
-            <h3 class="mt-10 text-black font-bold text-2xl font-['Times_New_Roman']">
-                BANKING & FINANCE
-            </h3>
-            <p class="text-white text-sm px-5 mt-3">
-                Posumassa fermentum metus tincidunt luctus hendrerit,
-                iaculis suspendisse esent sit amet rhoncus nisi.
-            </p>
-        </div>
-     
+    <!-- Top Highlight Cards / Badges -->
+    <section class="relative -mt-10 z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div class="p-8 bg-zinc-950/95 border border-red-900/60 rounded-2xl text-center shadow-xl hover:border-red-600 hover:shadow-red-900/30 transition-all duration-300 hover:-translate-y-2 group">
+                <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-red-950/60 border border-red-800/40 flex items-center justify-center text-red-500 group-hover:scale-110 transition-transform">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <h2 class="font-cinzel text-xl lg:text-2xl font-bold text-white group-hover:text-red-400 transition-colors">
+                    Global Coverage
+                </h2>
+                <p class="text-gray-400 text-sm mt-3 leading-relaxed">
+                    Representing clients across worldwide jurisdictions with clear strategy and decisive representation.
+                </p>
+            </div>
 
-        </div>
-         <div class="flex justify-evenly gap-6 mt-15 m-3">
+            <!-- Card 2 -->
+            <div class="p-8 bg-zinc-950/95 border border-red-900/60 rounded-2xl text-center shadow-xl hover:border-red-600 hover:shadow-red-900/30 transition-all duration-300 hover:-translate-y-2 group">
+                <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-red-950/60 border border-red-800/40 flex items-center justify-center text-red-500 group-hover:scale-110 transition-transform">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path></svg>
+                </div>
+                <h2 class="font-cinzel text-xl lg:text-2xl font-bold text-white group-hover:text-red-400 transition-colors">
+                    Press Releases
+                </h2>
+                <p class="text-gray-400 text-sm mt-3 leading-relaxed">
+                    Features clear messaging above the fold, landmark verdicts, and cutting-edge legal intelligence.
+                </p>
+            </div>
 
-        
-         <div class="border rounded-lg w-75 h-65 bg-red-900
-                    text-center flex flex-col items-center transition-transform duration-500
-            hover:scale-110">
-            <img
-                class="w-10 h-10 mt-6"
-                src="/images/insurance.jpg"
-                alt="">
-            <h3 class="mt-10 text-black font-bold text-2xl font-['Times_New_Roman']">
-                INSURANCE
-            </h3>
-            <p class="text-white text-sm px-5 mt-3">
-                Posumassa fermentum metus tincidunt luctus hendrerit,
-                iaculis suspendisse esent sit amet rhoncus nisi.
-            </p>
-        </div>
-         <div class="border rounded-lg w-75 h-65 bg-red-900
-                    text-center flex flex-col items-center transition-transform duration-500
-            hover:scale-110">
-            <img
-                class="w-10 h-10 mt-6"
-                src="/images/realestate.jpg"
-                alt="">
-            <h3 class="mt-10 text-black font-bold text-2xl font-['Times_New_Roman']">
-               REAL ESTATE
-            </h3>
-            <p class="text-white text-sm px-5 mt-3">
-                Posumassa fermentum metus tincidunt luctus hendrerit,
-                iaculis suspendisse esent sit amet rhoncus nisi.
-            </p>
-        </div>
-         <div class="border rounded-lg w-75 h-65 bg-red-900
-                    text-center flex flex-col items-center transition-transform duration-500
-            hover:scale-110">
-            <img
-                class="w-10 h-10 mt-6"
-                src="/images/civillitigation.jpg"
-                alt="">
-            <h3 class="mt-10 text-black font-bold text-2xl font-['Times_New_Roman']">
-                CIVIL LITIGATION
-            </h3>
-            <p class="text-white text-sm px-5 mt-3">
-                Posumassa fermentum metus tincidunt luctus hendrerit,
-                iaculis suspendisse esent sit amet rhoncus nisi.
-            </p>
-        </div>
-        </div>
-        <div class=" flex justify-center">
-            <button class="mt-5 px-6 py-2
-               bg-white text-red-900
-               rounded-lg font-bold
-               transition-all duration-300
-               hover:bg-red-900 hover:text-white
-               hover:scale-105">
-    Learn More ->
-</button>
+            <!-- Card 3 -->
+            <div class="p-8 bg-zinc-950/95 border border-red-900/60 rounded-2xl text-center shadow-xl hover:border-red-600 hover:shadow-red-900/30 transition-all duration-300 hover:-translate-y-2 group">
+                <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-red-950/60 border border-red-800/40 flex items-center justify-center text-red-500 group-hover:scale-110 transition-transform">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                </div>
+                <h2 class="font-cinzel text-xl lg:text-2xl font-bold text-white group-hover:text-red-400 transition-colors">
+                    Join Our Team
+                </h2>
+                <p class="text-gray-400 text-sm mt-3 leading-relaxed">
+                    Collaborate with leading legal minds and shape the future of high-stakes corporate and civil jurisprudence.
+                </p>
+            </div>
         </div>
     </section>
-    <section class="flex justify-evenly">
-<div class="pl-5">
-    <h3 class="text-2xl font-['Times_New_Roman'] pl-35">Latest News</h3>
-    <div class="flex">
-       <img class="pt-5 w-25 h-25" src="/images/law-2.jpg" alt="">
-        <p class="pl-4 pt-5 text-red-800">March 18, 2017 <br>
-<span class="text-black font-bold"> Hong Kong Competition Ordinance <br> enters into effect</p></span>
-    </div>
-    <div class="flex">
-       <img class="pt-5  w-25 h-25" src="/images/law-3.jpg" alt="">
-        <p class="pl-4 pt-5 text-red-800">March 18, 2017 <br>
-<span class="text-black font-bold"> Managing tax risks in challenging <br> times</span>
-    </div>
-    <div class="flex">
-       <img class="pt-5  w-25 h-25" src="/images/df5.jpg" alt="">
-        <p class="pl-4 pt-5 text-red-800">March 18, 2017 <br>
-<span class="text-black font-bold"> Top consumer law issues we were <br> talking about in 2015</p></span>
-    </div>
-</div>
-<div class="">
-    <h3 class="text-2xl font-['Times_New_Roman'] pl-35">Latest Publications</h3>
-    <div class="pl-4 pt-5 text-red-800">March 18, 2017 <br>
-<span class="text-black font-bold"> European Council adopts Insurance Distribution Directive</div></span>
-<div class="pl-4 pt-5 text-red-800">March 18, 2017 <br>
-<span class="text-black font-bold">International Arbitration Confirmed as Dominant Form of <br> Global Dispute Resolution</div></span>
-<div class="pl-4 pt-5 text-red-800">March 18, 2017 <br>
-<span class="text-black font-bold">The Privacy, Data Protection and Cybersecurity Law Review</div></span>
-<div class="pl-4 pt-5 text-red-800">March 18, 2017 <br>
-<span class="text-black font-bold">Oil and Gas Industry Favours International Arbitration <br> for Dispute Resolution</div></span>
-<div class="pl-4 pt-5 text-red-800">March 18, 2017 <br>
-<span class="text-black font-bold">Testing The Limits On State Regulation Of Crude Oil By Rail</div></span>
-</div>
-<div class="pt-30">
-<div class="border-1 w-65 h-50 bg-red-900 rounded-2xl  text-center flex flex-col items-center  transition-all duration-500
-         hover:rotate-2 hover:scale-105">
-    <h3 class="text-white m-1 pt-5 "> "Praesent sit amet rhoncus nisi. <br> Etiam tristique velit ut felis ultrices <br> pulvinar nec consectetur tincidunt <br> malesquada lorem. <br>
 
-<span class="flex justify-end pt-10 pr-5"><u> Amy Forbes</u></span>
-</h3>
-</div>
-</div>
+    <!-- Quote Section -->
+    <section id="quote" class="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto text-center">
+        <div class="relative py-8 px-6 sm:px-12 rounded-2xl bg-gradient-to-b from-red-950/30 to-black/60 border border-red-900/40 shadow-2xl">
+            <span class="text-6xl text-red-600/30 font-cinzel leading-none select-none">“</span>
+            <blockquote class="font-cinzel text-xl sm:text-2xl md:text-3xl font-semibold text-gray-200 tracking-wide leading-snug">
+                Law is nothing other than a certain ordinance of reason for the common good, promulgated by the person who has the care of the community.
+            </blockquote>
+            <p class="text-red-400 font-medium text-sm mt-4 tracking-wider uppercase">— St. Thomas Aquinas</p>
+        </div>
     </section>
+
+    <!-- Expertise & Values Section (3 Cards) -->
+    <section id="about" class="py-12 bg-zinc-950/70 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-red-500 font-semibold text-xs uppercase tracking-widest">Our Foundation</span>
+                <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-white mt-1">Excellence In Every Case</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-zinc-900/90 rounded-xl overflow-hidden border border-white/5 hover:border-red-800 transition-all duration-300 hover:-translate-y-2 group shadow-xl">
+                    <div class="h-60 overflow-hidden relative">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="./images/df5.jpg" alt="Our Expertise" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-cinzel font-bold text-2xl text-red-500 group-hover:text-red-400 transition-colors">Our Expertise</h3>
+                        <p class="text-gray-400 text-sm mt-3 leading-relaxed">
+                            Quisque consectetur lacinia felis, posumassa fermentum metus nibh, tincidunt luctus hendrerit, iaculis suspendisse potent.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-zinc-900/90 rounded-xl overflow-hidden border border-white/5 hover:border-red-800 transition-all duration-300 hover:-translate-y-2 group shadow-xl">
+                    <div class="h-60 overflow-hidden relative">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="./images/law-2.jpg" alt="Around the world" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-cinzel font-bold text-2xl text-red-500 group-hover:text-red-400 transition-colors">Around The World</h3>
+                        <p class="text-gray-400 text-sm mt-3 leading-relaxed">
+                            Quisque consectetur lacinia felis, posumassa fermentum metus nibh, tincidunt luctus hendrerit, iaculis suspendisse potent.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-zinc-900/90 rounded-xl overflow-hidden border border-white/5 hover:border-red-800 transition-all duration-300 hover:-translate-y-2 group shadow-xl">
+                    <div class="h-60 overflow-hidden relative">
+                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="./images/law-3.jpg" alt="Principles & Values" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-cinzel font-bold text-2xl text-red-500 group-hover:text-red-400 transition-colors">Principles & Values</h3>
+                        <p class="text-gray-400 text-sm mt-3 leading-relaxed">
+                            Quisque consectetur lacinia felis, posumassa fermentum metus nibh, tincidunt luctus hendrerit, iaculis suspendisse potent.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Practices Grid -->
+    <section id="practices" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <span class="text-red-500 font-semibold text-xs uppercase tracking-widest">Comprehensive Defense</span>
+            <h2 class="font-cinzel text-3xl sm:text-5xl font-bold text-white mt-2">EXPERIENCE & PRACTICES</h2>
+            <div class="w-24 h-1 bg-red-700 mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- 1. ENVIRONMENT -->
+            <div class="p-6 rounded-xl bg-gradient-to-b from-red-950/80 to-zinc-950 border border-red-900/50 hover:border-red-500 transition-all duration-300 hover:-translate-y-2 text-center group shadow-lg">
+                <div class="w-16 h-16 mx-auto mb-4 p-3 rounded-full bg-black/60 border border-red-800/40 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <img class="w-10 h-10 object-contain" src="./images/environment.jpg" alt="Environment Law" loading="lazy">
+                </div>
+                <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-red-400 transition-colors">ENVIRONMENT</h3>
+                <p class="text-gray-300 text-sm mt-3 leading-relaxed">
+                    Posumassa fermentum metus tincidunt luctus hendrerit, iaculis suspendisse esent sit amet rhoncus nisi.
+                </p>
+            </div>
+
+            <!-- 2. CORPORATE -->
+            <div class="p-6 rounded-xl bg-gradient-to-b from-red-950/80 to-zinc-950 border border-red-900/50 hover:border-red-500 transition-all duration-300 hover:-translate-y-2 text-center group shadow-lg">
+                <div class="w-16 h-16 mx-auto mb-4 p-3 rounded-full bg-black/60 border border-red-800/40 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <img class="w-10 h-10 object-contain" src="./images/corparate.jpg" alt="Corporate Law" loading="lazy">
+                </div>
+                <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-red-400 transition-colors">CORPORATE</h3>
+                <p class="text-gray-300 text-sm mt-3 leading-relaxed">
+                    Posumassa fermentum metus tincidunt luctus hendrerit, iaculis suspendisse esent sit amet rhoncus nisi.
+                </p>
+            </div>
+
+            <!-- 3. BANKING & FINANCE -->
+            <div class="p-6 rounded-xl bg-gradient-to-b from-red-950/80 to-zinc-950 border border-red-900/50 hover:border-red-500 transition-all duration-300 hover:-translate-y-2 text-center group shadow-lg">
+                <div class="w-16 h-16 mx-auto mb-4 p-3 rounded-full bg-black/60 border border-red-800/40 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <img class="w-10 h-10 object-contain" src="./images/bank.jpg" alt="Banking & Finance" loading="lazy">
+                </div>
+                <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-red-400 transition-colors">BANKING & FINANCE</h3>
+                <p class="text-gray-300 text-sm mt-3 leading-relaxed">
+                    Posumassa fermentum metus tincidunt luctus hendrerit, iaculis suspendisse esent sit amet rhoncus nisi.
+                </p>
+            </div>
+
+            <!-- 4. INSURANCE -->
+            <div class="p-6 rounded-xl bg-gradient-to-b from-red-950/80 to-zinc-950 border border-red-900/50 hover:border-red-500 transition-all duration-300 hover:-translate-y-2 text-center group shadow-lg">
+                <div class="w-16 h-16 mx-auto mb-4 p-3 rounded-full bg-black/60 border border-red-800/40 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <img class="w-10 h-10 object-contain" src="./images/insurance.jpg" alt="Insurance Law" loading="lazy">
+                </div>
+                <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-red-400 transition-colors">INSURANCE</h3>
+                <p class="text-gray-300 text-sm mt-3 leading-relaxed">
+                    Posumassa fermentum metus tincidunt luctus hendrerit, iaculis suspendisse esent sit amet rhoncus nisi.
+                </p>
+            </div>
+
+            <!-- 5. REAL ESTATE -->
+            <div class="p-6 rounded-xl bg-gradient-to-b from-red-950/80 to-zinc-950 border border-red-900/50 hover:border-red-500 transition-all duration-300 hover:-translate-y-2 text-center group shadow-lg">
+                <div class="w-16 h-16 mx-auto mb-4 p-3 rounded-full bg-black/60 border border-red-800/40 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <img class="w-10 h-10 object-contain" src="./images/realestate.jpg" alt="Real Estate Law" loading="lazy">
+                </div>
+                <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-red-400 transition-colors">REAL ESTATE</h3>
+                <p class="text-gray-300 text-sm mt-3 leading-relaxed">
+                    Posumassa fermentum metus tincidunt luctus hendrerit, iaculis suspendisse esent sit amet rhoncus nisi.
+                </p>
+            </div>
+
+            <!-- 6. CIVIL LITIGATION -->
+            <div class="p-6 rounded-xl bg-gradient-to-b from-red-950/80 to-zinc-950 border border-red-900/50 hover:border-red-500 transition-all duration-300 hover:-translate-y-2 text-center group shadow-lg">
+                <div class="w-16 h-16 mx-auto mb-4 p-3 rounded-full bg-black/60 border border-red-800/40 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <img class="w-10 h-10 object-contain" src="./images/civillitigation.jpg" alt="Civil Litigation" loading="lazy">
+                </div>
+                <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-red-400 transition-colors">CIVIL LITIGATION</h3>
+                <p class="text-gray-300 text-sm mt-3 leading-relaxed">
+                    Posumassa fermentum metus tincidunt luctus hendrerit, iaculis suspendisse esent sit amet rhoncus nisi.
+                </p>
+            </div>
+        </div>
+
+        <div class="mt-12 text-center">
+            <a href="#contact" class="inline-flex items-center gap-2 px-8 py-3.5 bg-red-700 hover:bg-red-800 text-white font-cinzel font-semibold text-sm uppercase tracking-wider rounded-lg transition-all duration-300 shadow-lg shadow-red-950 hover:scale-105">
+                Learn More <span>&rarr;</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Latest News, Publications & Testimonial Section -->
+    <section id="news" class="py-20 bg-zinc-950/80 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                <!-- Latest News (5 cols) -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="border-b border-red-800/40 pb-3">
+                        <h3 class="font-cinzel text-2xl font-bold text-white">Latest News</h3>
+                    </div>
+
+                    <!-- News item 1 -->
+                    <div class="flex gap-4 items-start group p-3 rounded-lg hover:bg-white/5 transition">
+                        <img class="w-20 h-20 object-cover rounded-md flex-shrink-0" src="./images/law-2.jpg" alt="News Image" loading="lazy">
+                        <div>
+                            <span class="text-xs text-red-400 font-semibold">March 18, 2017</span>
+                            <h4 class="text-sm font-semibold text-gray-200 group-hover:text-red-400 transition-colors mt-1">
+                                Hong Kong Competition Ordinance enters into effect
+                            </h4>
+                        </div>
+                    </div>
+
+                    <!-- News item 2 -->
+                    <div class="flex gap-4 items-start group p-3 rounded-lg hover:bg-white/5 transition">
+                        <img class="w-20 h-20 object-cover rounded-md flex-shrink-0" src="./images/law-3.jpg" alt="News Image" loading="lazy">
+                        <div>
+                            <span class="text-xs text-red-400 font-semibold">March 18, 2017</span>
+                            <h4 class="text-sm font-semibold text-gray-200 group-hover:text-red-400 transition-colors mt-1">
+                                Managing tax risks in challenging times
+                            </h4>
+                        </div>
+                    </div>
+
+                    <!-- News item 3 -->
+                    <div class="flex gap-4 items-start group p-3 rounded-lg hover:bg-white/5 transition">
+                        <img class="w-20 h-20 object-cover rounded-md flex-shrink-0" src="./images/df5.jpg" alt="News Image" loading="lazy">
+                        <div>
+                            <span class="text-xs text-red-400 font-semibold">March 18, 2017</span>
+                            <h4 class="text-sm font-semibold text-gray-200 group-hover:text-red-400 transition-colors mt-1">
+                                Top consumer law issues we were talking about in 2015
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Latest Publications (4 cols) -->
+                <div class="lg:col-span-4 space-y-4">
+                    <div class="border-b border-red-800/40 pb-3">
+                        <h3 class="font-cinzel text-2xl font-bold text-white">Latest Publications</h3>
+                    </div>
+
+                    <div class="space-y-4 text-sm">
+                        <div class="border-b border-white/5 pb-3">
+                            <span class="text-xs text-red-400 font-medium">March 18, 2017</span>
+                            <p class="font-medium text-gray-300 hover:text-white transition mt-1">European Council adopts Insurance Distribution Directive</p>
+                        </div>
+                        <div class="border-b border-white/5 pb-3">
+                            <span class="text-xs text-red-400 font-medium">March 18, 2017</span>
+                            <p class="font-medium text-gray-300 hover:text-white transition mt-1">International Arbitration Confirmed as Dominant Form of Global Dispute Resolution</p>
+                        </div>
+                        <div class="border-b border-white/5 pb-3">
+                            <span class="text-xs text-red-400 font-medium">March 18, 2017</span>
+                            <p class="font-medium text-gray-300 hover:text-white transition mt-1">The Privacy, Data Protection and Cybersecurity Law Review</p>
+                        </div>
+                        <div class="border-b border-white/5 pb-3">
+                            <span class="text-xs text-red-400 font-medium">March 18, 2017</span>
+                            <p class="font-medium text-gray-300 hover:text-white transition mt-1">Oil and Gas Industry Favours International Arbitration for Dispute Resolution</p>
+                        </div>
+                        <div>
+                            <span class="text-xs text-red-400 font-medium">March 18, 2017</span>
+                            <p class="font-medium text-gray-300 hover:text-white transition mt-1">Testing The Limits On State Regulation Of Crude Oil By Rail</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial Badge (3 cols) -->
+                <div class="lg:col-span-3 flex flex-col justify-center">
+                    <div class="p-6 rounded-2xl bg-gradient-to-b from-red-950/90 to-black border border-red-800/60 shadow-xl text-center transition-transform hover:scale-105 duration-300">
+                        <div class="text-3xl text-red-500 font-cinzel mb-2">“</div>
+                        <p class="text-gray-300 text-sm italic leading-relaxed">
+                            Praesent sit amet rhoncus nisi. Etiam tristique velit ut felis ultrices pulvinar nec consectetur tincidunt malesquada lorem.
+                        </p>
+                        <div class="mt-6 pt-4 border-t border-red-900/50">
+                            <span class="font-cinzel font-bold text-white text-base">Amy Forbes</span>
+                            <p class="text-xs text-red-400 uppercase tracking-wider">Managing Partner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Consultation Callout -->
+    <section id="contact" class="py-16 bg-gradient-to-r from-red-950 via-zinc-950 to-red-950 border-t border-red-900/40">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-white mb-4">
+                Need Immediate Legal Assistance?
+            </h2>
+            <p class="text-gray-300 text-base max-w-2xl mx-auto mb-8">
+                Our team of seasoned legal experts is standing by 24/7 to safeguard your interests and provide authoritative guidance.
+            </p>
+            <div class="flex flex-wrap items-center justify-center gap-4">
+                <a href="tel:+13344455777" class="px-8 py-3.5 bg-red-700 hover:bg-red-800 text-white font-cinzel font-bold text-sm uppercase tracking-wider rounded-lg shadow-xl hover:scale-105 transition">
+                    Call: +1 334-445-5777
+                </a>
+                <a href="mailto:consultation@lawyerandco.com" class="px-8 py-3.5 bg-black/60 hover:bg-black/90 text-white font-cinzel font-semibold text-sm uppercase tracking-wider rounded-lg border border-white/20 transition">
+                    Request Consultation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Footer -->
+    <footer class="bg-black text-gray-400 border-t border-white/10 text-xs py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="space-y-3">
+                    <h4 class="font-cinzel text-white text-lg font-bold">LAWYER & CO</h4>
+                    <p class="text-gray-400 leading-relaxed">
+                        Dedicated to extraordinary legal advocacy, corporate excellence, and client-first results across all jurisdictions.
+                    </p>
+                </div>
+                <div>
+                    <h5 class="font-cinzel text-white text-sm font-semibold mb-3 uppercase tracking-wider">Practice Areas</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#practices" class="hover:text-red-400 transition">Corporate Law</a></li>
+                        <li><a href="#practices" class="hover:text-red-400 transition">Banking & Finance</a></li>
+                        <li><a href="#practices" class="hover:text-red-400 transition">Civil Litigation</a></li>
+                        <li><a href="#practices" class="hover:text-red-400 transition">Real Estate Law</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-cinzel text-white text-sm font-semibold mb-3 uppercase tracking-wider">Quick Links</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-red-400 transition">Home</a></li>
+                        <li><a href="#about" class="hover:text-red-400 transition">About Us</a></li>
+                        <li><a href="#news" class="hover:text-red-400 transition">Latest Publications</a></li>
+                        <li><a href="#contact" class="hover:text-red-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-cinzel text-white text-sm font-semibold mb-3 uppercase tracking-wider">Headquarters</h5>
+                    <p class="text-gray-400 leading-relaxed">
+                        100 Wall Street, Suite 2400<br>
+                        New York, NY 10005<br>
+                        Phone: +1 334-445-5777<br>
+                        Email: info@lawyerandco.com
+                    </p>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between text-gray-500">
+                <p>&copy; 2026 Lawyer & Co. All Rights Reserved. Attorney Advertising.</p>
+                <div class="flex space-x-6 mt-4 sm:mt-0">
+                    <a href="#" class="hover:text-gray-300">Privacy Policy</a>
+                    <a href="#" class="hover:text-gray-300">Terms of Service</a>
+                    <a href="#" class="hover:text-gray-300">Disclaimer</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
 </body>
 </html>
